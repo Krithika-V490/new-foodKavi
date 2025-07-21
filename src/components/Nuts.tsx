@@ -19,6 +19,7 @@ const Nuts = () => {
   return (
     <section id="nuts" className="py-16 bg-cream-50">
       <div className="container-max section-padding">
+        {/* Section Title */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <Nut className="w-8 h-8 text-primary-600 mr-3" />
@@ -28,23 +29,27 @@ const Nuts = () => {
           <p className="text-lg font-tamil text-brown-600">புதிய மற்றும் சிறந்த தரமான கொட்டைகள்</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {/* Nut Cards Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {nutTypes.map((nut, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 card-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="aspect-square mb-4 bg-gradient-to-br from-primary-100 to-cream-100 rounded-lg flex items-center justify-center overflow-hidden">
+            <div
+              key={index}
+              className="bg-white rounded-xl p-4 card-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="aspect-[4/3] mb-3 bg-gradient-to-br from-primary-100 to-cream-100 rounded-lg overflow-hidden">
                 <img
                   src={`/${nut.image}`}
                   alt={nut.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = '/fallback.jpg'; // optional fallback if image is missing
+                    target.src = '/fallback.jpg';
                   }}
                 />
               </div>
 
               <div className="text-center">
-                <h4 className="text-lg font-semibold text-brown-800">
+                <h4 className="text-sm sm:text-base font-semibold text-brown-800">
                   {nut.name}
                 </h4>
               </div>
@@ -52,6 +57,7 @@ const Nuts = () => {
           ))}
         </div>
 
+        {/* Footer Info */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-800 rounded-full font-medium">
             <span className="mr-2">🥜</span>

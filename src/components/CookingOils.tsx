@@ -17,6 +17,7 @@ const CookingOils = () => {
   return (
     <section id="cooking-oils" className="py-16 bg-white">
       <div className="container-max section-padding">
+        {/* Section Title */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <Droplets className="w-8 h-8 text-brown-600 mr-3" />
@@ -25,29 +26,30 @@ const CookingOils = () => {
           <h3 className="text-2xl font-semibold text-brown-700 mb-2">Cold-Pressed Traditional Oils</h3>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {oilTypes.map((oil, index) => (
             <div
               key={index}
-              className="bg-cream-50 rounded-xl p-8 card-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="bg-cream-50 rounded-xl p-4 card-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-square mb-6 bg-gradient-to-br from-brown-100 to-cream-100 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="aspect-[4/3] mb-4 bg-gradient-to-br from-brown-100 to-cream-100 rounded-lg overflow-hidden">
                 <img
                   src={oilImages[index]}
                   alt={oil}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = '/fallback.jpg'; // optional fallback if you want to add a default image
+                    target.src = '/fallback.jpg';
                   }}
                 />
               </div>
 
               <div className="text-center">
-                <h4 className="text-xl font-semibold text-brown-800 mb-2">
+                <h4 className="text-base sm:text-lg font-semibold text-brown-800 mb-1">
                   {oil}
                 </h4>
-                <p className="text-brown-600 text-sm">
+                <p className="text-brown-600 text-xs sm:text-sm">
                   Traditional cold-pressed method
                 </p>
               </div>
@@ -55,6 +57,7 @@ const CookingOils = () => {
           ))}
         </div>
 
+        {/* Footer Note */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center px-6 py-3 bg-brown-100 text-brown-800 rounded-full font-medium">
             <span className="mr-2">🌿</span>

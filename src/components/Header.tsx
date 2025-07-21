@@ -14,32 +14,27 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container-max section-padding">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Left: Logo + Brand */}
-          <div className="flex items-center space-x-4">
-
+          {/* Logo + Brand */}
+          <div className="flex items-center gap-3 sm:gap-4">
             <img
               src="/logo_final.png"
               alt="Logo"
-              className="w-10 h-10 object-contain"
+              className="w-8 h-8 sm:w-10 sm:h-10 object-contain transition-transform hover:scale-105"
             />
-
-            <div>
-              <h1 className="text-xl lg:text-2xl font-bold text-primary-800">
-                KAVI FOOD PRODUCTS
-              </h1>
-
-            </div>
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-800">
+              KAVI FOOD PRODUCTS
+            </h1>
           </div>
 
-          {/* Right: Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-brown-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-sm lg:text-base text-brown-700 hover:text-primary-600 font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>
@@ -55,15 +50,15 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cream-200">
-            <nav className="flex flex-col space-y-3">
+            <nav className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-brown-700 hover:text-primary-600 font-medium py-2 transition-colors duration-200"
+                  className="text-sm text-brown-700 hover:text-primary-600 font-medium py-2 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

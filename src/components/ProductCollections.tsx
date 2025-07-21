@@ -10,7 +10,7 @@ const ProductCollections = () => {
       description: 'Premium collection of traditional millets and grains',
       tamilDesc: 'பாரம்பரிய சிறுதானியங்கள் மற்றும் தானியங்களின் சிறந்த தொகுப்பு',
       color: 'primary',
-      href: '#millet-basket'
+      href: '#millet-basket',
     },
     {
       title: 'Millet Noodles',
@@ -19,7 +19,7 @@ const ProductCollections = () => {
       description: 'Healthy and delicious millet-based noodles',
       tamilDesc: 'ஆரோக்கியமான மற்றும் சுவையான சிறுதானிய நூடுல்ஸ்',
       color: 'green',
-      href: '#millet-noodles'
+      href: '#millet-noodles',
     },
     {
       title: 'Cooking Oils',
@@ -28,15 +28,15 @@ const ProductCollections = () => {
       description: 'Cold-pressed traditional cooking oils',
       tamilDesc: 'குளிர் அழுத்தம் பாரம்பரிய சமையல் எண்ணெய்கள்',
       color: 'brown',
-      href: '#cooking-oils'
+      href: '#cooking-oils',
     },
     {
       title: 'Nuts',
       icon: Nut,
       description: 'Fresh and premium quality nuts',
       color: 'primary',
-      href: '#nuts'
-    }
+      href: '#nuts',
+    },
   ];
 
   const getColorClasses = (color: string) => {
@@ -63,31 +63,28 @@ const ProductCollections = () => {
           <p className="text-lg font-tamil text-brown-600">எங்கள் சிறந்த தரமான பொருட்கள்</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {collections.map((collection, index) => (
             <a
               key={index}
               href={collection.href}
-              className="group bg-cream-50 rounded-xl p-8 card-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group bg-cream-50 rounded-xl p-6 sm:p-8 card-shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="text-center">
-                <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center transition-all duration-300 ${getColorClasses(collection.color)}`}>
-                  <collection.icon className="w-10 h-10" />
+                <div
+                  className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-full flex items-center justify-center transition-all duration-300 ${getColorClasses(
+                    collection.color
+                  )}`}
+                >
+                  <collection.icon className="w-8 h-8 sm:w-10 sm:h-10" />
                 </div>
 
-                <h4 className="text-xl font-semibold text-brown-800 mb-2">
+                <h4 className="text-base sm:text-xl font-semibold text-brown-800 mb-2">
                   {collection.title}
                 </h4>
-                <p className="text-base font-tamil text-brown-600 mb-4">
-                  {collection.tamil}
-                </p>
-
-                <p className="text-brown-600 mb-2">
-                  {collection.description}
-                </p>
-                <p className="text-sm font-tamil text-brown-500">
-                  {collection.tamilDesc}
-                </p>
+                <p className="text-sm sm:text-base font-tamil text-brown-600 mb-2">{collection.tamil}</p>
+                <p className="text-brown-600 text-sm sm:text-base mb-1">{collection.description}</p>
+                <p className="text-sm font-tamil text-brown-500">{collection.tamilDesc}</p>
               </div>
             </a>
           ))}

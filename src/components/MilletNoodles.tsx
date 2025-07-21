@@ -16,20 +16,24 @@ const MilletNoodles = () => {
 
   return (
     <div id="millet-noodles" className="bg-[#fff9f0] min-h-screen py-10 px-4">
-      <h2 className="text-4xl font-bold text-center mb-10 text-[#634832]">Our Millet Noodles</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center mb-10 text-[#634832]">
+        Our Millet Noodles
+      </h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {noodles.map((noodle, index) => (
           <div
             key={index}
             className="rounded-2xl shadow-md overflow-hidden bg-white transition duration-300 hover:scale-105 hover:shadow-xl"
           >
-            <img
-              src={`/${noodle.image}`}
-              alt={noodle.name}
-              className="w-full h-56 object-cover"
-            />
-            <div className="p-4 text-center">
-              <h3 className="text-xl font-semibold text-[#634832]">{noodle.name}</h3>
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={`/${noodle.image}`}
+                alt={noodle.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-3 text-center">
+              <h3 className="text-lg font-semibold text-[#634832]">{noodle.name}</h3>
             </div>
           </div>
         ))}

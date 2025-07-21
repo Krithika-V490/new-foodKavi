@@ -32,7 +32,7 @@ const MilletBasket = () => {
     { english: 'Nattu Sakkarai', tamil: 'நாட்டு சர்க்கரை' },
     { english: 'Rava', tamil: 'ரவை' },
     { english: 'Semiya', tamil: 'சேமியா' },
-    { english: 'Moong Dal', tamil: 'பாசி பயறு' }
+    { english: 'Moong Dal', tamil: 'பாசி பயறு' },
   ];
 
   return (
@@ -44,26 +44,29 @@ const MilletBasket = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary-800">Millet Basket</h2>
           </div>
           <h3 className="text-2xl font-semibold text-brown-700 mb-2">Traditional Grains & Millets</h3>
-          <p className="text-lg font-tamil text-brown-600">பாரம்பரிய தானியங்கள் மற்றும் சிறுதானியங்கள்</p>
+          <p className="text-lg font-tamil text-brown-600">
+            பாரம்பரிய தானியங்கள் மற்றும் சிறுதானியங்கள்
+          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {milletProducts.map((product, index) => (
-            <div key={index} className="bg-white rounded-lg p-4 card-shadow hover:shadow-lg transition-shadow duration-300">
+            <div
+              key={index}
+              className="bg-white rounded-lg p-4 card-shadow hover:shadow-lg transition-shadow duration-300"
+            >
               <div className="text-center">
-                <h4 className="text-base font-semibold text-brown-800 mb-1">
+                <h4 className="text-sm sm:text-base font-semibold text-brown-800 mb-1">
                   {product.english}
                 </h4>
-                <p className="text-sm font-tamil text-brown-600">
-                  {product.tamil}
-                </p>
+                <p className="text-xs sm:text-sm font-tamil text-brown-600">{product.tamil}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-800 rounded-full font-medium">
+          <div className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-800 rounded-full font-medium text-sm sm:text-base">
             <span className="mr-2">🌾</span>
             All products are naturally processed and chemical-free
           </div>
