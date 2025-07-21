@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-cream-300 mb-4 leading-relaxed">
-              Bringing wholesome millet goodness from our kitchen to yours. 
+              Bringing wholesome millet goodness from our kitchen to yours.
               Traditional recipes, modern quality standards, and a mother's love in every product.
             </p>
             <p className="text-sm font-tamil text-cream-400">
@@ -74,17 +74,17 @@ const Footer = () => {
                   Ganapathy, Coimbatore – 641 006
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
                 <a href="tel:+919025252475" className="text-cream-300 hover:text-primary-400 transition-colors text-sm">
                   +91 9025252475
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                <a href="mailto:kavifoodproducts@gmail.com" className="text-cream-300 hover:text-primary-400 transition-colors text-sm">
+                <a href="mailto:kavifoodproducts.in@gmail.com" className="text-cream-300 hover:text-primary-400 transition-colors text-sm">
                   kavifoodproducts.in@gmail.com
                 </a>
               </div>

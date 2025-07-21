@@ -49,7 +49,7 @@ const Contact = () => {
                 </div>
                 <h4 className="font-semibold text-brown-800 mb-1">Email</h4>
                 <p className="text-brown-600">
-                  <a href="mailto:kavifoodproducts@gmail.com" className="hover:text-primary-600 transition-colors">
+                  <a href="mailto:kavifoodproducts.in@gmail.com" className="hover:text-primary-600 transition-colors">
                     kavifoodproducts.in@gmail.com
                   </a>
                 </p>
